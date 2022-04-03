@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.patiskull.databinding.FragmentStartBinding
 
-class StartListFragment : Fragment() {
-    private var _binding: StartListFragment? = null
+class StartFragment : Fragment() {
 
+    private var _binding: FragmentStartBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,11 +18,10 @@ class StartListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = StartListFragment.inflate(inflater, container, false)
+        _binding = FragmentStartBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        // Navigate to entree menu
-        binding.startOrderBtn.setOnClickListener {
-            // TODO: navigate to the EntreeMenuFragment
+
+        binding.buttonKecamatan.setOnClickListener {
         findNavController().navigate(R.id.action_StartListFragment_to_LocationListFragment)
         }
         return root
