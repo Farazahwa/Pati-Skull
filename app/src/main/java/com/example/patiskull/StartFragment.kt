@@ -22,7 +22,7 @@ class StartFragment : Fragment() {
         val root: View = binding.root
 
         binding.buttonKecamatan.setOnClickListener {
-        findNavController().navigate(R.id.action_StartListFragment_to_LocationListFragment)
+        findNavController().navigate(R.id.action_startFragment_to_locationFragment)
         }
         return root
     }
