@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.patiskull.databinding.FragmentLocationBinding
 
-class LocationListFragment : Fragment() {
+class LocationFragment : Fragment() {
 
     private var _binding: FragmentLocationBinding? = null
     private val binding get() = _binding!!
@@ -25,11 +25,16 @@ class LocationListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentLocationBinding.inflate(inflater, container, false)
-        return binding.root
+        val root: View = binding.root
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        recyclerView = binding.recyclerView
+        super.onViewCreated(view, savedInstanceState)
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
