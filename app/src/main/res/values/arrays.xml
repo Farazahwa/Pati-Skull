@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="locations">
+        <item>Sukolilo</item>
+        <item>Kayen</item>
+        <item>Tambakromo</item>
+        <item>Winong</item>
+        <item>Pucakwangi</item>
+        <item>Jaken</item>
+        <item>Batangan</item>
+        <item>Juwana</item>
+        <item>Jakenan</item>
         <item>Pati</item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Gabus</item>
+        <item>Margorejo</item>
+        <item>Gembong</item>
+        <item>Tlogowungu</item>
+        <item>Wedarijaksa</item>
+        <item>Trangkil</item>
+        <item>Margoyoso</item>
+        <item>Gunung Wungkal</item>
+        <item>Cluwak</item>
+        <item>Tayu</item>
+        <item>Dukuhseti</item>
     </string-array>
 </resources>

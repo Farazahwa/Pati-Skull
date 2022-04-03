@@ -32,10 +32,5 @@ class LocationAdapter(
     override fun onBindViewHolder(holder: LocationViewHolder, position: Int) {
         val item = location[position]
         holder.button.text = location.toString()
-<<<<<<< Updated upstream
-        
-=======
-
->>>>>>> Stashed changes
     }
 }
