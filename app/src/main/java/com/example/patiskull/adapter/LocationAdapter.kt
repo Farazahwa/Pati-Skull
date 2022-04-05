@@ -1,19 +1,18 @@
 package com.example.patiskull.adapter
 
-import android.content.Context
-import android.location.Location
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.example.patiskull.R
+import com.example.patiskull.model.SchoolViewModel
 
-class LocationAdapter(
-    private val context: Context,
-    ) : RecyclerView.Adapter<LocationAdapter.LocationViewHolder>() {
+class LocationAdapter
+    : RecyclerView.Adapter<LocationAdapter.LocationViewHolder>() {
 
-    val location = context.resources.getStringArray(R.array.locations).toList()
+    private val shareViewModel: SchoolViewModel by activityViewModels()
+    val location = shareViewModel.getAllLocations().toList()
 
     class LocationViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val button = view.findViewById<Button>(R.id.button_location)

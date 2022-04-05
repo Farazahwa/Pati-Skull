@@ -20,10 +20,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import com.example.lunchtray.databinding.FragmentEntreeMenuBinding
-import com.example.lunchtray.model.OrderViewModel
-import com.example.patiskull.model.OrderViewModel
 
 /**
  * [EntreeMenuFragment] allows people to add an entree to the order or cancel the order.
