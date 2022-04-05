@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PROJEK/Pati-Skull/app/src/main/res/layout/fragment_location.xml" value="0.17074275362318841" />
+        <entry key="..\:/PROJEK/Pati-Skull/app/src/main/res/layout/fragment_school.xml" value="0.1" />
         <entry key="..\:/PatiSkull/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/PatiSkull/app/src/main/res/layout/fragment_location.xml" value="0.22" />
         <entry key="..\:/PatiSkull/app/src/main/res/layout/fragment_start.xml" value="0.22" />
