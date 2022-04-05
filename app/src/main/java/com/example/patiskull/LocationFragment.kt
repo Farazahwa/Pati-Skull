@@ -34,7 +34,7 @@ class LocationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = LocationAdapter(requireContext())
+        recyclerView.adapter = LocationAdapter()
     }
 
     override fun onDestroyView() {

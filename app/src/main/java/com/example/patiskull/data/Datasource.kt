@@ -234,19 +234,11 @@ object Datasource {
 
         "SD Negeri Pakem 1" to
                 SchoolMenu(
-<<<<<<< HEAD
                      "SD Negeri Pakem 1",
                      "Ds. Pakem Kec. Sukolilo Kab. Pati",
                      "A",
                      20316125,
                     "Winong"
-=======
-                    name = "SD Negeri Pakem 1",
-                    address = "Ds. Pakem Kec. Sukolilo Kab. Pati",
-                    Akreditasi = "A",
-                    NPSN = 20316125,
-                    type = ItemType.Winong
->>>>>>> 6cb2f9453525fe284e7df22cf555955ee10ce6e4
                 ),
 
         "SD Negeri Pakem 2" to

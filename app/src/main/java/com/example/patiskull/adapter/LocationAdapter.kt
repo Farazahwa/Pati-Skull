@@ -11,7 +11,7 @@ import com.example.patiskull.model.SchoolViewModel
 class LocationAdapter
     : RecyclerView.Adapter<LocationAdapter.LocationViewHolder>() {
 
-    private val shareViewModel: SchoolViewModel by activityViewModels()
+    private val shareViewModel = SchoolViewModel()
     val location = shareViewModel.getAllLocations().toList()
 
     class LocationViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
@@ -30,6 +30,6 @@ class LocationAdapter
 
     override fun onBindViewHolder(holder: LocationViewHolder, position: Int) {
         val item = location[position]
-        holder.button.text = location.toString()
+        holder.button.text = item.toString()
     }
 }

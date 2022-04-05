@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.patiskull.StartFragment"
-        android:label="fragment_start"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_start" >
         <action
             android:id="@+id/action_startFragment_to_locationFragment"
@@ -17,6 +17,6 @@
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.patiskull.LocationFragment"
-        android:label="fragment_location"
+        android:label="@string/location"
         tools:layout="@layout/fragment_location" />
 </navigation>

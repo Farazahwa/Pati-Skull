@@ -15,4 +15,8 @@ class SchoolViewModel : ViewModel() {
         return locations
     }
 
+    fun getSchoolFromLocation() {
+
+    }
+
 }

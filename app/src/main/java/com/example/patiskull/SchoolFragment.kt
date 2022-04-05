@@ -5,12 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-<<<<<<< HEAD
-import com.example.lunchtray.databinding.FragmentEntreeMenuBinding
-=======
 import androidx.recyclerview.widget.RecyclerView
 import com.example.patiskull.databinding.FragmentLocationBinding
->>>>>>> 6cb2f9453525fe284e7df22cf555955ee10ce6e4
+
 
 class SchoolFragment : Fragment() {
 
