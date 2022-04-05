@@ -235,7 +235,6 @@ object Datasource {
         "SD Negeri Pakem 1" to
                 SchoolMenu(
                     name = "SD Negeri Pakem 1",
-
                     address = "Ds. Pakem Kec. Sukolilo Kab. Pati",
                     Akreditasi = "A",
                     NPSN = 20316125,
