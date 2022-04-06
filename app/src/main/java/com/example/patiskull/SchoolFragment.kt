@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.patiskull.databinding.FragmentLocationBinding
 
+
 class SchoolFragment : Fragment() {
 
     private var _binding: FragmentLocationBinding? = null
