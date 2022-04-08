@@ -1,6 +1,5 @@
 package com.example.patiskull.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,7 @@ class SchoolAdapter (
         )
     : RecyclerView.Adapter<SchoolAdapter.SchoolViewHolder>() {
 
-    private val school = shareViewModel.school
+    private val school = shareViewModel.schoolMenuLocations
 
     class SchoolViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val button = view.findViewById<Button>(R.id.button_item)
