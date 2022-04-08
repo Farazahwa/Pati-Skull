@@ -24,5 +24,15 @@
             app:destination="@id/startFragment" />
     </fragment>
         android:label="@string/location"
-        tools:layout="@layout/fragment_location" />
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_schoolFragment2"
+            app:destination="@id/schoolFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/schoolFragment2"
+        android:name="com.example.patiskull.SchoolFragment"
+        android:label="@string/school_list"
+        tools:layout="@layout/fragment_school" >
+    </fragment>
 </navigation>
