@@ -42,4 +42,5 @@
         android:id="@+id/detailSchool"
         android:name="com.example.patiskull.DetailSchool"
         android:label="DetailSchool" />
+    </fragment>
 </navigation>
