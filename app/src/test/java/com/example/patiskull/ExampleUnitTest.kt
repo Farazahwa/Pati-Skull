@@ -16,14 +16,15 @@ class ExampleUnitTest {
     @Test
     fun SchoolFragmentTest() {
         val viewModel = SchoolViewModel()
-        viewModel.getAllSchoolFromLocation(item = "Sukolilo")
+        viewModel.setAllSchoolFromLocation(item = "Sukolilo")
         assert( viewModel.schoolMenuLocations.map { it.name }.contains("SD Negeri Gelur"))
     }
 
     @Test
     fun setSchoolDetail() {
         val viewModel = SchoolViewModel()
-        viewModel.getSchool(item = "SD Negeri Gelur")
-        assert ( viewModel.)
+        viewModel.setAllSchoolFromLocation(item = "Sukolilo")
+        viewModel.setSchool(item = "SD Negeri Gelur")
+        assert ( viewModel.schoolDetail.map { it.NPSN }.contains(20317109))
     }
 }
