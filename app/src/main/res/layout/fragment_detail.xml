@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailSchool">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.patiskull.model.SchoolViewModel" />
+
+        <!-- TODO: Add the data binding variable for the EntreeMenuFragment -->
+        <variable
+            name="entreeFragment"
+            type="com.example.patiskull.DetailSchool" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/side_margin">
+
+            <TextView
+                android:id="@+id/detail_school"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Label"
+                android:text="@string/detail_school"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!-- TODO: display the entree name based on the entree selection -->
+            <TextView
+                android:id="@+id/school_name"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_name"
+                android:text="@{viewModel.school.name}"
+                tools:text="Cauliflower" />
+
+            <!-- TODO: display the side name based on the side selection -->
+            <TextView
+                android:id="@+id/school_address"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/entree_selection"
+                tools:text="Spicy Potatoes"
+                android:text ="@{viewModel.side.name}"/>
+
+            <!-- TODO: display the accompaniment name based on the accompaniment selection -->
+            <TextView
+                android:id="@+id/school_accreditation"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/side_selection"
+                tools:text="Mixed Berries"
+                android:text="@{viewModel.accompaniment.name}"/>
+
+            <TextView
+                android:id="@+id/school_npsn"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/side_selection"
+                tools:text="Mixed Berries"
+                android:text="@{viewModel.accompaniment.name}"/>
+
+            <TextView
+                android:id="@+id/school_location"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/side_selection"
+                tools:text="Mixed Berries"
+                android:text="@{viewModel.school.name}"/>
+
+            <View
+                android:id="@+id/divider"
+                style="@style/Widget.PatiSkull.Divider"
+                android:layout_marginBottom="@dimen/side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/accompaniment_selection" />
+
+
+            <!-- TODO: submit the detail when clicked -->
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/side_margin"
+                android:text="@string/submit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/total"
+                android:onClick="@{() -> checkoutFragment.submitOrder()}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
