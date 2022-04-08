@@ -125,15 +125,6 @@ object Datasource {
                     "Kayen"
                 ),
 
-        "SMP PGRI 6 Kayen" to
-                SchoolMenu(
-                     "SMP Negeri Kayen",
-                     "Jalan Perhutani Kayen Kec. Kayen Kab. Pati",
-                     "B",
-                    20338968,
-                    "Kayen"
-                ),
-
         "SMA Joyo Kusumo Kayen" to
                 SchoolMenu(
                      "SMA Joyo Kusumo Kayen",
@@ -145,7 +136,7 @@ object Datasource {
 
         "SMA Negeri 1 Kayen" to
                 SchoolMenu(
-                     "SMP Negeri Kayen",
+                     "SMP Negeri 1 Kayen",
                      "Jalan Raya Kayen Kec. Kayen Kab. Pati",
                      "A",
                     20339020,
@@ -154,57 +145,40 @@ object Datasource {
 
         "SD Negeri Pakis" to
                 SchoolMenu(
-                     "SD Negeri Gelur",
-                     "Dukuh Gelur, Tompegunung Kec. Sukolilo Kab. Pati",
+                     "SD Negeri Pakis",
+                     "Jalan Raya Kayen - Pakis KM 12 Kec. Tambakromo Kab. Pati",
                      "A",
-                     20317109,
+                     20338718,
                     "Tambakromo"
                 ),
 
         "SD Negeri Keben" to
                 SchoolMenu(
-                     "SD Negeri Pakem 1",
-                     "Ds. Pakem Kec. Sukolilo Kab. Pati",
+                     "SD Negeri Keben",
+                     "Ds. Pakem Kec. Tambakromo Kab. Pati",
                      "A",
-                     20316125,
-                    "Tambakromo"
-                ),
-
-        "SD Negeri Sitirejo" to
-                SchoolMenu(
-                    "SD Negeri Pakem 2",
-                     "Dukuh Ngrombo, Pakem   Kec. Sukolilo Kab. Pati",
-                     "A",
-                     2031633,
+                     20316252,
                     "Tambakromo"
                 ),
 
         "SMP Negeri 1 Tambakromo" to
                 SchoolMenu(
-                     "SMP Negeri 1 Sukolilo",
-                     "Jl. Sunan Prawoto No.933, Kedungwinong Kec. Sukolilo Kab. Pati",
+                     "SMP Negeri 1 Tambakromo",
+                     "Jalan Raya Tambakromo Kec. Tambakromo Kab. Pati",
                      "A",
-                     20338990,
+                     20338977,
                     "Tambakromo"
                 ),
 
         "SMP Negeri 2 Tambakromo" to
                 SchoolMenu(
-                     "SMP Negeri 2 Sukolilo",
-                     "Jalan Sunan Prawoto Km. 06, Wegil Kec. Sukolilo Kab. Pati",
+                     "SMP Negeri 2 Tambakromo",
+                     "Jl. Tambakromo-Maitan Km.12 Kec. Tambakromo Kab. Pati",
                      "A",
-                     20338990,
+                    20338991,
                     "Tambakromo"
                 ),
 
-        "SMP Negeri 3 Tambakromo" to
-                SchoolMenu(
-                     "SMP PGRI 15 Sukolilo",
-                     "Jalan Sunan Prawoto No.09, Prawoto Kec. Sukolilo Kab. Pati",
-                     "A",
-                     20338966,
-                    "Tambakromo"
-                ),
 
         "SD Negeri Lumbungmas 1" to
                 SchoolMenu(
@@ -221,34 +195,7 @@ object Datasource {
                      "Jalan KH. Ahmad Dahlan No.05 Kec. Sukolilo Kab. Pati",
                      "A",
                      20338966,
-                    "Winong"
-                ),
-
-        "SD Negeri Gelur" to
-                SchoolMenu(
-                    "SD Negeri Gelur",
-                     "Dukuh Gelur, Tompegunung Kec. Sukolilo Kab. Pati",
-                     "A",
-                     20317109,
-                    "Winong"
-                ),
-
-        "SD Negeri Pakem 1" to
-                SchoolMenu(
-                     "SD Negeri Pakem 1",
-                     "Ds. Pakem Kec. Sukolilo Kab. Pati",
-                     "A",
-                     20316125,
-                    "Winong"
-                ),
-
-        "SD Negeri Pakem 2" to
-                SchoolMenu(
-                     "SD Negeri Pakem 2",
-                     "Dukuh Ngrombo, Pakem   Kec. Sukolilo Kab. Pati",
-                     "A",
-                     2031633,
-                    "Winong"
+                    "Pucakwangi"
                 ),
 
         "SMP Negeri 1 Sukolilo" to
@@ -257,26 +204,9 @@ object Datasource {
                      "Jl. Sunan Prawoto No.933, Kedungwinong Kec. Sukolilo Kab. Pati",
                      "A",
                      20338990,
-                    "Winong"
+                    "Pucakwangi"
                 ),
 
-        "SMP Negeri 2 Sukolilo" to
-                SchoolMenu(
-                    "SMP Negeri 2 Sukolilo",
-                     "Jalan Sunan Prawoto Km. 06, Wegil Kec. Sukolilo Kab. Pati",
-                     "A",
-                     20338990,
-                    "Puncakwangi"
-                ),
-
-        "SMP PGRI 15 Sukolilo" to
-                SchoolMenu(
-                    "SMP PGRI 15 Sukolilo",
-                     "Jalan Sunan Prawoto No.09, Prawoto Kec. Sukolilo Kab. Pati",
-                     "A",
-                     20338966,
-                    "Puncakwangi"
-                ),
 
         "SMK Sultan Agung" to
                 SchoolMenu(
@@ -287,13 +217,6 @@ object Datasource {
                     "Puncakwangi"
                 ),
 
-        "SMK Muhammadiyah 3 Sukolilo" to
-                SchoolMenu(
-                     "SMK Muhammadiyah 3 Sukolilo",
-                     "Jalan KH. Ahmad Dahlan No.05 Kec. Sukolilo Kab. Pati",
-                     "A",
-                     20338966,
-                    "Puncakwangi"
-                ),
+
     )
 }

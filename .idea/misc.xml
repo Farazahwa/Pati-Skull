@@ -3,6 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry key="..\:/Pati-Skull-main/Pati-Skull-main/Pati-Skull/app/src/main/res/layout/fragment_detail_school.xml" value="0.215625" />
+        <entry key="..\:/Pati-Skull/app/src/main/res/layout/fragment_detail_school.xml" value="0.215625" />
+        <entry key="..\:/Pati-Skull/app/src/main/res/layout/fragment_location.xml" value="0.215625" />
+        <entry key="..\:/Pati-Skull/app/src/main/res/layout/fragment_start.xml" value="0.215625" />
+=======
+        <entry key="..\:/PROJEK/Pati-Skull/app/src/main/res/layout/fragment_location.xml" value="0.17074275362318841" />
+        <entry key="..\:/PROJEK/Pati-Skull/app/src/main/res/layout/fragment_school.xml" value="0.12" />
+>>>>>>> 6cb2f9453525fe284e7df22cf555955ee10ce6e4
+=======
+        <entry key="..\:/Pati-Skull-main/Pati-Skull-main/Pati-Skull/app/src/main/res/layout/fragment_detail_school.xml" value="0.215625" />
+>>>>>>> b614f49c0efcd102b25887002e3d2fcc4b6a0f8b
+>>>>>>> c3daabcc9f58da62bfc016a9befcca8e5d95f599
         <entry key="..\:/PatiSkull/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/PatiSkull/app/src/main/res/layout/fragment_location.xml" value="0.22" />
         <entry key="..\:/PatiSkull/app/src/main/res/layout/fragment_school.xml" value="0.14130434782608695" />

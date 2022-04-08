@@ -17,15 +17,12 @@
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.patiskull.LocationFragment"
-<<<<<<< HEAD
         android:label="fragment_location"
         tools:layout="@layout/fragment_location" >
         <action
             android:id="@+id/action_locationFragment_to_startFragment"
             app:destination="@id/startFragment" />
     </fragment>
-=======
         android:label="@string/location"
         tools:layout="@layout/fragment_location" />
->>>>>>> b614f49c0efcd102b25887002e3d2fcc4b6a0f8b
 </navigation>
