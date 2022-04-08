@@ -1,12 +1,14 @@
 package com.example.patiskull
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.patiskull.adapter.LocationAdapter
@@ -15,6 +17,11 @@ import com.example.patiskull.databinding.FragmentLocationBinding
 import com.example.patiskull.model.SchoolViewModel
 
 class DetailSchool : Fragment() {
+
+    companion object {
+        const val SEARCH_MAPS = "https://www.google.com/maps/place/"
+    }
+
 
     private var _binding: FragmentLocationBinding? = null
     private val binding get() = _binding!!
@@ -43,20 +50,10 @@ class DetailSchool : Fragment() {
     }
 
     fun shareDetail(index: Int)  {
-//        val detailSchool = getString(
-//            Datasource.schoolMenus[index].second.name
-//
-//
-//        )
-//
-//        val intent = Intent(Intent.ACTION_SEND)
-//            .setType("text/plain")
-//            .putExtra(Intent.EXTRA_SUBJECT, getString(R.string.detail_school))
-//            .putExtra(Intent.EXTRA_TEXT, detailSchool)
-//
-//        if (activity?.packageManager?.resolveActivity(intent, 0) != null) {
-//            startActivity(intent)
-//        }
-
+        holder.button.setOnClickListener {
+            val queryUrl : Uri = Uri.parse("${SEARCH_MAPS}${viewModel.}")
+            val intent = Intent(Intent.ACTION_VIEW, queryUrl)
+            context.startActivity(intent)
+        }
     }
 }
