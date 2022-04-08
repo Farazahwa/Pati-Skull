@@ -14,7 +14,7 @@ class SchoolAdapter (
         )
     : RecyclerView.Adapter<SchoolAdapter.SchoolViewHolder>() {
 
-    private val school = shareViewModel._schoolMenuLocations
+    private val school = shareViewModel.schoolMenuLocations
 
     class SchoolViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val button = view.findViewById<Button>(R.id.button_item)
@@ -39,7 +39,7 @@ class SchoolAdapter (
         holder.button.text = item.toString()
 
         holder.view.setOnClickListener {
-            shareViewModel.getSchool(item)
+            shareViewModel.setSchool(item)
             holder.view.findNavController().navigate(R.id.action_schoolFragment2_to_detailSchool)
         }
     }

@@ -8,10 +8,11 @@ class SchoolViewModel : ViewModel() {
     // Map of School list
     val schoolItems = Datasource.schoolMenus
 
-    private lateinit var _schoolMenuLocations: List<SchoolMenu>
+    private var _schoolMenuLocations: List<SchoolMenu> = schoolItems.map { s -> s.second }
     val schoolMenuLocations: List<SchoolMenu> = _schoolMenuLocations
 
-    private lateinit var _schoolDetail: List<SchoolMenu>
+    private var _schoolDetail: List<SchoolMenu> = schoolItems.map { s -> s.second }
+    val schoolDetail: List<SchoolMenu> = _schoolDetail
 
     fun getAllLocations() : List<String> {
         val locations = schoolItems
@@ -20,13 +21,13 @@ class SchoolViewModel : ViewModel() {
         return locations
     }
 
-    fun getAllSchoolFromLocation(item: String) {
+    fun setAllSchoolFromLocation(item: String) {
         _schoolMenuLocations = schoolItems
             .map { it.second}
             .filter { it.location == item }
     }
 
-    fun getSchool(item: String) {
+    fun setSchool(item: String) {
         _schoolDetail = schoolItems
             .map { it.second }
             .filter { it.name == item && it.location == _schoolMenuLocations[0].location }
