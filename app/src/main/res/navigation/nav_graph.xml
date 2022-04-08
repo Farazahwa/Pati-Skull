@@ -17,12 +17,6 @@
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.patiskull.LocationFragment"
-        android:label="fragment_location"
-        tools:layout="@layout/fragment_location" >
-        <action
-            android:id="@+id/action_locationFragment_to_startFragment"
-            app:destination="@id/startFragment" />
-    </fragment>
         android:label="@string/location"
         tools:layout="@layout/fragment_location" >
         <action
@@ -40,7 +34,12 @@
     </fragment>
     <fragment
         android:id="@+id/detailSchool"
+<<<<<<< HEAD
         android:name="com.example.patiskull.DetailSchool"
         android:label="DetailSchool" />
     </fragment>
+=======
+        android:name="com.example.patiskull.DetailSchoolFragment"
+        android:label="@string/description" />
+>>>>>>> d644da5c4ee2ff861cedf50c79d0b5a50bf28bbe
 </navigation>

@@ -44,14 +44,6 @@
         <item name="android:text">@string/cancel</item>
     </style>
 
-    <!-- Button Style for Next Button -->
-    <style name="Widget.Order.Button.Next" parent="">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/side_margin</item>
-        <item name="android:text">@string/next</item>
-    </style>
-
     <!-- TextView Style for Menu Item Info -->
     <style name="Widget.SchoolMenu.TextView.Info" parent="">
         <item name="android:layout_width">wrap_content</item>

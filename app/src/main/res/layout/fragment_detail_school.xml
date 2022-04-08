@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailSchoolFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.patiskull.model.SchoolViewModel" />
 
+        <variable
+            name="detailFragment"
+            type="com.example.patiskull.DetailSchoolFragment" />
+    </data>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/side_margin">
+
+            <TextView
+                android:id="@+id/detail_school"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Label"
+                android:text="@string/detail_school"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/school_name"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_school"
+                android:text="@{viewModel.schoolDetail.get(0).name}"
+                tools:text="School Name" />
+
+            <TextView
+                android:id="@+id/school_address"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_name"
+                tools:text="School Address"
+                android:text ="@{viewModel.schoolDetail.get(0).address}"/>
+
+            <TextView
+                android:id="@+id/school_accreditation"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_address"
+                tools:text="School Accreditation"
+                android:text="@{viewModel.schoolDetail.get(0).accreditation}"/>
+
+            <TextView
+                android:id="@+id/school_npsn"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_accreditation"
+                tools:text="School NPSN"
+                android:text="@{viewModel.schoolDetail.get(0).NPSN}"/>
+
+            <TextView
+                android:id="@+id/school_location"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_npsn"
+                tools:text="School Location"
+                android:text="@{viewModel.schoolDetail.get(0).location}"/>
+
+            <View
+                android:id="@+id/divider"
+                style="@style/Widget.PatiSkull.Divider"
+                android:layout_marginBottom="@dimen/side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_location" />
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/side_margin"
+                android:text="@string/submit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                android:onClick="@{() -> detailFragment.shareDetail()}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

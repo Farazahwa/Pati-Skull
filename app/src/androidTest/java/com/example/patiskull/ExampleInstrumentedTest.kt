@@ -17,8 +17,8 @@ class ExampleInstrumentedTest {
     @Test
     fun SchoolFragmentTest() {
         val viewModel = SchoolViewModel()
-        viewModel.getSchoolFromLocation(item = "Sukolilo")
-        assertEquals( "SD Negeri Gelur" , viewModel.schoolMenuLocations[0].name)
+        viewModel.getAllSchoolFromLocation(item = "Sukolilo")
+        assertEquals( "SD Negeri Gelur" , viewModel._schoolMenuLocations[0].name)
     }
 
 }
