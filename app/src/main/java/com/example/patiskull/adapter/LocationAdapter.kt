@@ -30,11 +30,8 @@ class LocationAdapter
 
     override fun onBindViewHolder(holder: LocationViewHolder, position: Int) {
         val item = location[position]
-<<<<<<< HEAD
         holder.button.text = location.toString()
 
-=======
         holder.button.text = item.toString()
->>>>>>> b614f49c0efcd102b25887002e3d2fcc4b6a0f8b
     }
 }
