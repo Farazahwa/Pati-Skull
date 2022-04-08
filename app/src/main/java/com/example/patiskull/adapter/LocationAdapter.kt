@@ -37,6 +37,7 @@ class LocationAdapter (
 
         holder.view.setOnClickListener {
             shareViewModel.setAllSchoolFromLocation(item)
+
             holder.view.findNavController().navigate(R.id.action_locationFragment_to_schoolFragment2)
         }
     }

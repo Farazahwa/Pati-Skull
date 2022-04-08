@@ -32,44 +32,90 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/school_name"
+                android:id="@+id/school_name_label"
                 style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detail_school"
-                android:text="@{viewModel.schoolDetail.get(0).name}"
+                android:text="School Name "
                 tools:text="School Name" />
 
             <TextView
-                android:id="@+id/school_address"
+                android:id="@+id/school_name"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                android:layout_width="120dp"
+                android:text="@{viewModel.schoolDetail.name}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_school"
+                tools:text="School Name" />
+
+
+            <TextView
+                android:id="@+id/school_address_label"
                 style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/school_name"
                 tools:text="School Address"
-                android:text ="@{viewModel.schoolDetail.get(0).address}"/>
+                android:text ="School Address"/>
 
             <TextView
-                android:id="@+id/school_accreditation"
+                android:id="@+id/school_address"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                android:layout_width="120dp"
+                android:text="@{viewModel.schoolDetail.address}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_name"
+                tools:text="School Address" />
+
+            <TextView
+                android:id="@+id/school_accreditation_label"
                 style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/school_address"
                 tools:text="School Accreditation"
-                android:text="@{viewModel.schoolDetail.get(0).accreditation}"/>
+                android:text="School Accreditation"/>
 
             <TextView
-                android:id="@+id/school_npsn"
+                android:id="@+id/school_accreditation"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                android:layout_width="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_address"
+                tools:text="School Accreditation"
+                android:text="@{viewModel.schoolDetail.accreditation}"/>
+
+            <TextView
+                android:id="@+id/school_npsn_label"
                 style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/school_accreditation"
                 tools:text="School NPSN"
-                android:text="@{viewModel.schoolDetail.get(0).NPSN}"/>
+                android:text="School NPSN"/>
 
             <TextView
-                android:id="@+id/school_location"
+                android:id="@+id/school_npsn"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                android:layout_width="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_accreditation"
+                tools:text="School NPSN"
+                android:text="@{Integer.toString(viewModel.schoolDetail.NPSN)}"/>
+
+            <TextView
+                android:id="@+id/school_location_label"
                 style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/school_npsn"
                 tools:text="School Location"
-                android:text="@{viewModel.schoolDetail.get(0).location}"/>
+                android:text="School Location"/>
+
+            <TextView
+                android:id="@+id/school_location"
+                style="@style/Widget.PatiSkull.TextView.CheckoutItem.Info"
+                android:layout_width="120dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/school_npsn"
+                tools:text="School Location"
+                android:text="@{viewModel.schoolDetail.location}"/>
 
             <View
                 android:id="@+id/divider"

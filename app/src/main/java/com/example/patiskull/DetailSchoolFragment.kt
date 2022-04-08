@@ -8,9 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.RecyclerView
 import com.example.patiskull.databinding.FragmentDetailSchoolBinding
-import com.example.patiskull.databinding.FragmentLocationBinding
 import com.example.patiskull.model.SchoolViewModel
 
 class DetailSchoolFragment : Fragment() {
@@ -18,7 +16,6 @@ class DetailSchoolFragment : Fragment() {
     companion object {
         const val SEARCH_MAPS = "https://www.google.com/maps/place/"
     }
-
 
     private var _binding: FragmentDetailSchoolBinding? = null
     private val binding get() = _binding!!
@@ -35,8 +32,11 @@ class DetailSchoolFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         binding.apply {
             viewModel = shareViewModel
+            detailFragment = this@DetailSchoolFragment
         }
     }
 
@@ -46,7 +46,7 @@ class DetailSchoolFragment : Fragment() {
     }
 
     fun shareDetail()  {
-        val queryUrl : Uri = Uri.parse("${SEARCH_MAPS}${shareViewModel.schoolDetail[0].name}")
+        val queryUrl : Uri = Uri.parse("${SEARCH_MAPS}${shareViewModel.schoolDetail?.name}")
         val intent = Intent(Intent.ACTION_VIEW, queryUrl)
         context?.startActivity(intent)
     }

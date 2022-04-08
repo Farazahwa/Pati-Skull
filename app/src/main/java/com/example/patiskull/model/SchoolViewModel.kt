@@ -6,14 +6,14 @@ import com.example.patiskull.data.Datasource
 class SchoolViewModel : ViewModel() {
 
     // Map of School list
-    val schoolItems = Datasource.schoolMenus
+    private val schoolItems = Datasource.schoolMenus
 
     private var _schoolMenuLocations: List<SchoolMenu> = schoolItems.map { s -> s.second }
     val schoolMenuLocations: List<SchoolMenu>
         get() = _schoolMenuLocations
 
-    private var _schoolDetail: List<SchoolMenu> = schoolItems.map { s -> s.second }
-    val schoolDetail: List<SchoolMenu>
+    private var _schoolDetail: SchoolMenu? = null
+    val schoolDetail: SchoolMenu?
         get() = _schoolDetail
 
     fun getAllLocations() : List<String> {
@@ -32,7 +32,7 @@ class SchoolViewModel : ViewModel() {
     fun setSchool(item: String) {
         _schoolDetail = schoolItems
             .map { it.second }
-            .filter { it.name.contains(item) && it.location.contains(_schoolMenuLocations[0].location) }
+            .first { it.name.contains(item) && it.location.contains(_schoolMenuLocations[0].location) }
     }
 
 }
