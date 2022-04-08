@@ -1,12 +1,10 @@
 package com.example.patiskull
 
-import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
-
+import com.example.patiskull.model.SchoolViewModel
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -15,10 +13,12 @@ import org.junit.Assert.*
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
     @Test
-    fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.patiskull", appContext.packageName)
+    fun SchoolFragmentTest() {
+        val viewModel = SchoolViewModel()
+        viewModel.getSchoolFromLocation(item = "Sukolilo")
+        assertEquals( "SD Negeri Gelur" , viewModel.school[0].name)
     }
+
 }
