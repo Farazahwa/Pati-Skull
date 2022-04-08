@@ -14,11 +14,4 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
 
-    @Test
-    fun SchoolFragmentTest() {
-        val viewModel = SchoolViewModel()
-        viewModel.getAllSchoolFromLocation(item = "Sukolilo")
-        assertEquals( "SD Negeri Gelur" , viewModel._schoolMenuLocations[0].name)
-    }
-
 }
