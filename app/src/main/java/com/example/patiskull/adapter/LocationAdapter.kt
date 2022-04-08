@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.patiskull.LocationFragment
 import com.example.patiskull.R
 import com.example.patiskull.model.SchoolViewModel
 
@@ -38,7 +37,7 @@ class LocationAdapter (
         holder.button.text = item.toString()
 
         holder.view.setOnClickListener {
-            shareViewModel.getSchoolFromLocation(item)
+            shareViewModel.getAllSchoolFromLocation(item)
             holder.view.findNavController().navigate(R.id.action_locationFragment_to_schoolFragment2)
         }
     }

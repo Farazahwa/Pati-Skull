@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.patiskull.R
 import com.example.patiskull.model.SchoolViewModel
@@ -36,5 +37,10 @@ class SchoolAdapter (
     override fun onBindViewHolder(holder: SchoolAdapter.SchoolViewHolder, position: Int) {
         val item = school[position].name
         holder.button.text = item.toString()
+
+        holder.view.setOnClickListener {
+            shareViewModel.getSchool(item)
+            holder.view.findNavController().navigate(R.id.action_schoolFragment2_to_detailSchool)
+        }
     }
 }

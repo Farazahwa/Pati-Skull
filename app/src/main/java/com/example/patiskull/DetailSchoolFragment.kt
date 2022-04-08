@@ -8,40 +8,36 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.patiskull.adapter.LocationAdapter
-import com.example.patiskull.data.Datasource
+import com.example.patiskull.databinding.FragmentDetailSchoolBinding
 import com.example.patiskull.databinding.FragmentLocationBinding
 import com.example.patiskull.model.SchoolViewModel
 
-class DetailSchool : Fragment() {
+class DetailSchoolFragment : Fragment() {
 
     companion object {
         const val SEARCH_MAPS = "https://www.google.com/maps/place/"
     }
 
 
-    private var _binding: FragmentLocationBinding? = null
+    private var _binding: FragmentDetailSchoolBinding? = null
     private val binding get() = _binding!!
-    private lateinit var recyclerView: RecyclerView
-    private val viewModel: SchoolViewModel by activityViewModels()
+    private val shareViewModel: SchoolViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLocationBinding.inflate(inflater, container, false)
+        _binding = FragmentDetailSchoolBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        recyclerView = binding.recyclerView
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = LocationAdapter(viewModel)
+        binding.apply {
+            viewModel = shareViewModel
+        }
     }
 
     override fun onDestroyView() {
@@ -49,11 +45,9 @@ class DetailSchool : Fragment() {
         _binding = null
     }
 
-    fun shareDetail(index: Int)  {
-        holder.button.setOnClickListener {
-            val queryUrl : Uri = Uri.parse("${SEARCH_MAPS}${viewModel.}")
-            val intent = Intent(Intent.ACTION_VIEW, queryUrl)
-            context.startActivity(intent)
-        }
+    fun shareDetail()  {
+        val queryUrl : Uri = Uri.parse("${SEARCH_MAPS}${shareViewModel.schoolDetail[0].name}")
+        val intent = Intent(Intent.ACTION_VIEW, queryUrl)
+        context?.startActivity(intent)
     }
 }
