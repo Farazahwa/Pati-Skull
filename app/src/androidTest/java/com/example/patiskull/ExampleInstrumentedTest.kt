@@ -13,6 +13,10 @@ import org.junit.runner.RunWith
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f38bc16e3548e7fdac43b8a5651863b47658952d
     @Test
     fun SchoolFragmentTest() {
         val viewModel = SchoolViewModel()
@@ -25,6 +29,6 @@ class ExampleInstrumentedTest {
         val viewModel = SchoolViewModel()
         viewModel.setAllSchoolFromLocation(item = "Sukolilo")
         viewModel.setSchool(item = "SD Negeri Gelur")
-        assert ( viewModel.schoolDetail.map { it.NPSN }.contains(20317109))
+        assert( viewModel.schoolDetail?.NPSN == 20317109)
     }
 }
