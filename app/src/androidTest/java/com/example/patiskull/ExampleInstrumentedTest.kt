@@ -13,10 +13,6 @@ import org.junit.runner.RunWith
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
-<<<<<<< HEAD
-=======
-
->>>>>>> f38bc16e3548e7fdac43b8a5651863b47658952d
     @Test
     fun SchoolFragmentTest() {
         val viewModel = SchoolViewModel()
