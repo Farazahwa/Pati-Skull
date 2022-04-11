@@ -134,7 +134,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"
-                android:onClick="@{() -> detailFragment.shareDetail()}" />
+                android:onClick="@{() -> detailFragment.shareDetail(viewModel.schoolDetail.name)}" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

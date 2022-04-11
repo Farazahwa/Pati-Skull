@@ -3,6 +3,7 @@ package com.example.patiskull
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,7 @@ import com.example.patiskull.model.SchoolViewModel
 class DetailSchoolFragment : Fragment() {
 
     companion object {
-        const val SEARCH_MAPS = "https://www.google.com/maps/place/"
+        const val SEARCH_MAPS = "geo:0,0?q="
     }
 
     private var _binding: FragmentDetailSchoolBinding? = null
@@ -45,9 +46,10 @@ class DetailSchoolFragment : Fragment() {
         _binding = null
     }
 
-    fun shareDetail()  {
-        val queryUrl : Uri = Uri.parse("${SEARCH_MAPS}${shareViewModel.schoolDetail?.name}")
+    fun shareDetail(name: String)  {
+        val queryUrl : Uri = Uri.parse("${SEARCH_MAPS}${name}")
         val intent = Intent(Intent.ACTION_VIEW, queryUrl)
+        intent.setPackage("com.google.android.apps.maps")
         context?.startActivity(intent)
     }
 }
